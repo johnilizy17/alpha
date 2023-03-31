@@ -47,7 +47,53 @@
     <!-- responsive css -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
 
+    <style>
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            width: 100%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            table-layout: fixed;
+        }
 
+        table td {
+            word-wrap: break-word;
+            /* All browsers since IE 5.5+ */
+            overflow-wrap: break-word;
+            /* Renamed property in CSS3 draft spec */
+        }
+
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+    </style>
 </head>
 
 <body>
@@ -62,7 +108,7 @@
             <circle class="middle" cx="60" cy="60" r="38" />
             <circle class="outer" cx="60" cy="60" r="44" />
         </svg>
-        <a class="cencel-preloader" href="/index.html#">Cancel Preloader</a>
+        <a class="cencel-preloader" href="#">Cancel Preloader</a>
     </div>
 
     <div class="search-wrap">
@@ -79,7 +125,7 @@
             <div class="sidebar-widget-container">
                 <div class="widget-heading media">
                     <div class="media-body">
-                        <a href="/index.html#" class="close-side-widget">
+                        <a href="#" class="close-side-widget">
                             <i class="icon icon-cross"></i>
                         </a>
                     </div>
@@ -91,7 +137,7 @@
                         <i class="icon icon-shopping-cart"></i>
                     </p>
                     <p class="xs-btn-wraper">
-                        <a class="btn btn-primary" href="/index.html#">Return To Shop</a>
+                        <a class="btn btn-primary" href="#">Return To Shop</a>
                     </p>
                 </div>
             </div>
@@ -103,7 +149,7 @@
         <div class="xs-sidebar-widget">
             <div class="sidebar-widget-container">
                 <div class="widget-heading">
-                    <a href="/index.html#" class="close-side-widget">
+                    <a href="#" class="close-side-widget">
                         <i class="icon icon-cross"></i>
                     </a>
                 </div>
@@ -154,7 +200,7 @@
                     </ul>
                     <div class="subscribe-from">
                         <p>Get Subscribed!</p>
-                        <form action="/index.html#" method="POST" id="subscribe-form" class="subscribe-form">
+                        <form action="#" method="POST" id="subscribe-form" class="subscribe-form">
                             <label for="sub-input"></label>
                             <div class="form-group">
                                 <input type="email" name="email" id="sub-input" placeholder="Enter your mail here"
@@ -164,14 +210,14 @@
                         </form>
                     </div>
                     <ul class="social-list version-2">
-                        <li><a href="/index.html#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="/index.html#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="/index.html#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="/index.html#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="/index.html#" class="vimeo"><i class="fa fa-vimeo"></i></a></li>
+                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#" class="vimeo"><i class="fa fa-vimeo"></i></a></li>
                     </ul>
                     <div class="text-center">
-                        <a href="/index.html#" class="btn btn-primary">Purchase Now</a>
+                        <a href="#" class="btn btn-primary">Purchase Now</a>
                     </div>
                 </div>
             </div>
@@ -332,137 +378,82 @@
             <div class="banner-item"
                 style="background: url(assets2/images/background/banner_bg.jpg) no-repeat center center /cover">
                 <div class="container">
-                    <div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="gamfi_V2_hero_Left">
-                                        <h2>ALPHA247 <span>V2</span> MINTING</h2>
-                                        <p>Each NFT costs 0.1 BNB, excluding gas fee.<br />
-                                            Your Available NFT(s): <span id="yourNFT"> 0 </span>
-                                        </p>
-                                        <h2> <span style="color:white" id="numMinted"> 0 </span> <span>/</span> <span
-                                                style="color:pink">1000 </span></h2>
-                                        <div class="gamfi_V2_hero_Btns banner-content">
-                                            <form>
-                                                <div class="row">
-                                                    <div class="col-md-12 mb-6">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="banner-content">
+                                <figure>
+                                    <blockquote class="blockquote">
+                                        <p>Get an extra raffle ticket by telling your friends.</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer">
+                                        Spread the love, and get ₦100 <cite title="Source Title">when your friend signs
+                                            up</cite>
+                                    </figcaption>
+                                </figure>
+                                <div class="table-responsive-sm">
+                                    <table class="styled-table">
+                                        <thead>
+                                            <tr>
+                                                <th>S/N</th>
+                                                <th>Referral Wallet</th>
+                                                <th>Downline Number</th>
+                                                <th>Amount Paid</th>
+                                                <th> Referral Bonus</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>1</th>
+                                                <td>FHFH576HDDFDHFJDF6</td>
+                                                <td>0913029290</td>
+                                                <td>$10</td>
+                                                <td>$1</td>
+                                            </tr>
 
-                                                        <input name="num" id="nftnum" placeholder="0" />
+                                            <tr class="active-row">
+                                                <th>1</th>
+                                                <td>FHFH576HDDFDHFJDF6</td>
+                                                <td>0913029290</td>
+                                                <td>$10</td>
+                                                <td>$1</td>
+                                            </tr>
 
-                                                    </div>
-                                                </div>
-                                                <div id="report"></div>
-                                                <div class="row">
-                                                    <div class="col-md-12 mb-6">
+                                            <tr>
+                                                <th>1</th>
+                                                <td>FHFH576HDDFDHFJDF6</td>
+                                                <td>0913029290</td>
+                                                <td>$10</td>
+                                                <td>$1</td>
+                                            </tr>
 
-                                                        <button type="button"
-                                                            class="readon white-btn hover-shape VIEW_Projects_Btn"
-                                                            id="mint">
-                                                            <span class="btn-text">Buy</span>
-                                                            <span class="hover-shape1"></span>
-                                                            <span class="hover-shape2"></span>
-                                                            <span class="hover-shape3"></span>
-                                                        </button>
 
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
+                                            <tr class="active-row">
+                                                <th>1</th>
+                                                <td>FHFH576HDDFDHFJDF6</td>
+                                                <td>0913029290</td>
+                                                <td>$10</td>
+                                                <td>$1</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">Sum</td>
+                                                <td colspan="3">$30</td>
 
-                                    </div>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="gamfi_V2_hero_right">
-                                        <div class="gamfi_V2_heroRocket">
-                                            <img src="/assets2/images/ball.webp" alt="Rocket Img"
-                                                class="Img-fluid RedRocketImg" id="btn-add-to-mtm" />
-                                        </div>
-                                    </div>
+                                <div class="input-group flex-nowrap" style="margin-top:20px">
+                                    <span class="input-group-text" id="addon-wrapping"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                                            <path
+                                                d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                                        </svg></span>
+                                    <input type="text" class="form-control" value="ddhjfdj2323dfdfxfbshd"
+                                        aria-label="Username" aria-describedby="addon-wrapping">
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gamfi-about-secion pb-80 md-pb-45">
-                        <div class="container">
-
-                            <div
-                                class="pt-130 md-pt-80 heading-area align-items-center d-flex justify-content-between mb-30">
-                                <div class="sec-heading">
-                                    <div class="sub-inner mb-15">
-                                        <span class="sub-title">3 easy steps</span>
-                                        <img class="heading-left-image" src="assets/images/icons/steps.png"
-                                            alt="Steps-Image" />
-                                    </div>
-                                    <h2 class="title">How to Mint</h2>
-                                </div>
-                                <div class="gamfi-btn-area">
-                                    <ul>
-                                        <li>
-                                            <a class="view-more black-shape" href="index.html">
-                                                <span class="btn-text"> NFT </span>
-                                                <i class="icon-arrow_right"></i>
-                                                <span class="hover-shape1"></span>
-                                                <span class="hover-shape2"></span>
-                                                <span class="hover-shape3"></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="participate-area row">
-                                <div class="col-lg-4">
-                                    <div class="participate-item d-flex wow fadeInUp" data-wow-delay="100ms"
-                                        data-wow-duration="1500ms">
-                                        <div class="number-image">
-                                            <img src="assets/images/icons/participate-image.png"
-                                                alt="Participate-Image" />
-                                        </div>
-                                        <div class="participate-info">
-                                            <h4 class="mb-10">Connect Your Wallet</h4>
-                                            <p class="description">
-                                                Your wallet must be connected to the BINANCE SMART CHAIN.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="participate-item d-flex wow fadeInUp mr-30" data-wow-delay="200ms"
-                                        data-wow-duration="2000ms">
-                                        <div class="number-image">
-                                            <img src="assets/images/icons/participate-image2.png"
-                                                alt="Participate-Image" />
-                                        </div>
-                                        <div class="participate-info">
-                                            <h4 class="mb-10">Buy NFT</h4>
-                                            <p class="description">
-                                                Enter the number of NFT's
-                                                you want to mint by clicking the "+" or "-" button and and then click on
-                                                the Mint
-                                                button.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="participate-item d-flex wow fadeInUp mr-20" data-wow-delay="300ms"
-                                        data-wow-duration="2500ms">
-                                        <div class="number-image">
-                                            <img src="assets/images/icons/participate-image3.png"
-                                                alt="Participate-Image" />
-                                        </div>
-                                        <div class="participate-info">
-                                            <h4 class="mb-10">NFT Minted</h4>
-                                            <p class="description">
-                                                You will see the number of NFT’s you’ve minted by the “Your Available
-                                                NFT(s)” message
-                                                near the top of this page.
-                                                <br />
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
                             </div>
                         </div>
                     </div>
@@ -499,9 +490,9 @@
                                     <ul>
                                         <li><a href="/contact.html"> Contact Us</a></li>
                                         <li><a href="/about.html"> About us</a></li>
-                                        <li><a href="/index.html#"> Facebook</a></li>
-                                        <li><a href="/index.html#"> Telegram</a></li>
-                                        <li><a href="/index.html#"> Twitter</a></li>
+                                        <li><a href="#"> Facebook</a></li>
+                                        <li><a href="#"> Telegram</a></li>
+                                        <li><a href="#"> Twitter</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -535,7 +526,7 @@
 
 
         <div class="BackTo">
-            <a href="/index.html#" class="fa fa-angle-up" aria-hidden="true"></a>
+            <a href="#" class="fa fa-angle-up" aria-hidden="true"></a>
         </div>
 
         <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
@@ -579,7 +570,7 @@
 
         <script src="assets/js/mint.js"></script>
         <script>
-            $("/index.html#btn-add-to-mtm").click(() => {
+            $("#btn-add-to-mtm").click(() => {
                 try {
                     // wasAdded is a boolean. Like any RPC method, an error may be thrown.
                     ethereum.request({
