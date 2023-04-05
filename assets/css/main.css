@@ -879,6 +879,8 @@ p {
   }
   .header-wrapper .main-menu li a {
     font-size: 14px;
+    
+    margin-right: 30px;
   }
   .header-wrapper .mneu-btn-grp {
     gap: 4px;
@@ -1614,6 +1616,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 0 15px;
   padding-bottom: 20px;
   padding-top: 20px;
@@ -1628,6 +1631,7 @@ p {
   display: flex;
   align-items: center;
   gap: 5px 20px;
+  margin-bottom: 20px;
 }
 .main__table .table__wrap .table__items .t__items .t__items__left h6 {
   color: var(--white);
@@ -1673,6 +1677,7 @@ p {
   align-items: center;
   gap: 10px;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 .main__table .table__wrap .table__items .mart__point__items .twing {
   color: var(--textcolor);
@@ -1929,6 +1934,7 @@ p {
 .main__table__tennis .table__wrap .table__items .tennis__right {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0px 30px;
 }
 .main__table__tennis .table__wrap .table__items .tennis__right .mart__point__two .mart__point__right {
@@ -1976,6 +1982,7 @@ p {
   display: grid;
   justify-content: center;
   text-align: center;
+  margin-bottom: 10px;
 }
 .main__table__basketball .table__wrap .table__items .tennis__right .mart__point__two .point__box .tov,
 .main__table__basketball .table__wrap .table__items .tennis__right .mart__point__items .point__box .tov {
@@ -4513,9 +4520,6 @@ p {
     background-color: var(--button-two);
     border-radius: 10px;
   }
-  .main__body__wrap .live__heightlight .main__table {
-    width: 1000px;
-  }
   .live__heightlight {
     overflow-x: scroll;
   }
@@ -5446,3 +5450,15 @@ p {
 }
 /*Abstracts / reponsive*/
 /*CSS Table Of Content Ends End*//*# sourceMappingURL=main.css.map */
+
+@media screen and (min-width: 700px) {
+  .header-section {
+   height:60px;
+   padding: 10px;
+  }
+  .main-menu {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+  }
+}
