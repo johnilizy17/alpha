@@ -383,7 +383,8 @@ h6 {
 }
 
 .header .navigation {
-    background: 0 0
+    background: 0 0;
+    display: flex;
 }
 
 .xs-menu ul.nav-menu>li>a {
@@ -2542,7 +2543,8 @@ h6 {
 }
 
 .footer-widget .footer-logo {
-    margin-bottom: 36px
+    margin-bottom: 36px;
+    width:70px;
 }
 
 .footer-widget .widget-title {
