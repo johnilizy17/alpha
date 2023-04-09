@@ -498,7 +498,7 @@ h6 {
     background: rgba(12, 3, 47, .8);
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     z-index: 10;
@@ -722,7 +722,7 @@ h6 {
 
 .banner-item {
     min-height: 1226px;
-    padding-top: 242px;
+    padding-top: 182px;
     position: relative
 }
 

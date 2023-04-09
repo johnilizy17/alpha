@@ -48,50 +48,105 @@
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
 
     <style>
-        .styled-table {
+        
+        table {
+            border: 1px solid #ccc;
             border-collapse: collapse;
-            margin: 25px 0;
-            font-size: 0.9em;
-            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
             width: 100%;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
             table-layout: fixed;
         }
 
+        table caption {
+            font-size: 1.5em;
+            margin: .5em 0 .75em;
+        }
+
+        table tr {
+            background-color: transparent;
+            border: 1px solid #ddd;
+            padding: .35em;
+        }
+
+        table th,
         table td {
-            word-wrap: break-word;
-            /* All browsers since IE 5.5+ */
-            overflow-wrap: break-word;
-            /* Renamed property in CSS3 draft spec */
+            padding: .625em;
+            text-align: center;
         }
 
-        .styled-table thead tr {
-            background-color: #009879;
-            color: #ffffff;
-            text-align: left;
+        table th {
+            font-size: .85em;
+            letter-spacing: .1em;
+            text-transform: uppercase;
         }
 
-        .styled-table th,
-        .styled-table td {
-            padding: 12px 15px;
+        @media screen and (max-width: 600px) {
+            table {
+                border: 0;
+            }
+
+            table caption {
+                font-size: 1.3em;
+            }
+
+            table thead {
+                border: none;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
+
+            table tr {
+                border-bottom: 3px solid #ddd;
+                display: block;
+                margin-bottom: .625em;
+            }
+
+            table td {
+                border-bottom: 1px solid #ddd;
+                display: block;
+                font-size: .8em;
+                text-align: right;
+            }
+
+            table td::before {
+                /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            table td:last-child {
+                border-bottom: 0;
+            }
         }
 
-        .styled-table tbody tr {
-            border-bottom: 1px solid #dddddd;
 
-        }
 
-        .styled-table tbody tr:nth-of-type(even) {
-            background-color: #f3f3f3;
-        }
 
-        .styled-table tbody tr:last-of-type {
-            border-bottom: 2px solid #009879;
-        }
 
-        .styled-table tbody tr.active-row {
-            font-weight: bold;
-            color: #009879;
+
+
+
+
+
+
+
+
+
+        /* general styling */
+        body {
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.25;
         }
     </style>
 </head>
@@ -393,49 +448,52 @@
                                     <table class="styled-table">
                                         <thead>
                                             <tr>
-                                                <th>S/N</th>
-                                                <th>Referral Wallet</th>
-                                                <th>Downline Number</th>
-                                                <th>Amount Paid</th>
-                                                <th> Referral Bonus</th>
+                                                <th scope="col">S/N</th>
+                                                <th scope="col">Referral Wallet</th>
+                                                <th scope="col">Downline Number</th>
+                                                <th scope="col">Amount Paid</th>
+                                                <th scope="col"> Referral Bonus</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th>1</th>
-                                                <td>FHFH576HDDFDHFJDF6</td>
-                                                <td>0913029290</td>
-                                                <td>$10</td>
-                                                <td>$1</td>
+                                                <td scope="row" data-label="S/N">1</th>
+                                                <td data-label="Referral Wallet">FHFH576HDDFDHFJDF6</td>
+                                                <td data-label="Downline Number">0913029290</td>
+                                                <td data-label="Amount Paid">$10</td>
+                                                <td data-label="Referral Bonus">$1</td>
                                             </tr>
 
                                             <tr class="active-row">
-                                                <th>1</th>
-                                                <td>FHFH576HDDFDHFJDF6</td>
-                                                <td>0913029290</td>
-                                                <td>$10</td>
-                                                <td>$1</td>
+                                                
+                                                <td scope="row" data-label="S/N">2</th>
+                                                    <td data-label="Referral Wallet">FHFH576HDDFDHFJDF6</td>
+                                                    <td data-label="Downline Number">0913029290</td>
+                                                    <td data-label="Amount Paid">$10</td>
+                                                    <td data-label="Referral Bonus">$1</td>
                                             </tr>
 
                                             <tr>
-                                                <th>1</th>
-                                                <td>FHFH576HDDFDHFJDF6</td>
-                                                <td>0913029290</td>
-                                                <td>$10</td>
-                                                <td>$1</td>
+                                                
+                                                <td scope="row" data-label="S/N">3</th>
+                                                    <td data-label="Referral Wallet">FHFH576HDDFDHFJDF6</td>
+                                                    <td data-label="Downline Number">0913029290</td>
+                                                    <td data-label="Amount Paid">$10</td>
+                                                    <td data-label="Referral Bonus">$1</td>
                                             </tr>
 
 
                                             <tr class="active-row">
-                                                <th>1</th>
-                                                <td>FHFH576HDDFDHFJDF6</td>
-                                                <td>0913029290</td>
-                                                <td>$10</td>
-                                                <td>$1</td>
+                                                
+                                                <td scope="row" data-label="S/N">4</th>
+                                                    <td data-label="Referral Wallet">FHFH576HDDFDHFJDF6</td>
+                                                    <td data-label="Downline Number">0913029290</td>
+                                                    <td data-label="Amount Paid">$10</td>
+                                                    <td data-label="Referral Bonus">$1</td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2">Sum</td>
-                                                <td colspan="3">$30</td>
+                                                <td  colspan="2">Sum</td>
+                                                <td data-label="Total" colspan="3">$30</td>
 
                                             </tr>
                                         </tbody>
@@ -456,66 +514,68 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <div class="featured-area">
-            <div class="blockcain-and-featured-area">
-
-                <section class="blockcain-top-sec">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6 wow fadeInUp" data-wow-duration="1.5s">
-                                <div class="blockcain-top">
-                                    <h2 class="column-title">
-                                        Alpha Referral System <br />
-                                        <p>
-                                            Round Robin System
-                                        </p>
-                                    </h2>
+                    <div class="featured-area" style="margin-top: 20px;">
+                        <div class="blockcain-and-featured-area" style="padding:20px">
+            
+                            <section class="blockcain-top-sec">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6 wow fadeInUp" data-wow-duration="1.5s">
+                                            <div class="blockcain-top">
+                                                <h2 class="column-title">
+                                                    Alpha Referral System <br />
+                                                    <p>
+                                                        Round Robin System
+                                                    </p>
+                                                </h2>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 offset-md-1 wow fadeInUp" data-wow-duration="2s">
+                                            <div class="blockcain-top-content">
+                                                <p>
+                                                    An Aplha team is known as a “Unity” and team-building is encouraged
+            
+                                                    by rewarding leaders with both direct and indirect referral rewards up
+                                                    
+                                                    to 15 levels deep. Rewards are paid directly into the Vault and helps
+                                                    
+                                                    increase daily rewards.
+                                                </p>
+                                                <p>
+                                                    Deposit Rewards          
+                                                    
+                                                    <ol type="1">
+                                                    <li>1. 5% of all deposits from direct referrals (level 1) get paid to the direct
+            
+                                                        upline wallet</li>
+            
+                                                    <li>2. If the direct upline wallet doesn't qualify for referral rewards, the 5% deposit reward goes to the Alpha Vault (tax vault)</li>
+            
+                                                </ol>
+                                                </p>
+                                                <p>
+                                                    Compound Rewards          
+                                                    
+                                                    <ol type="1">
+                                                    <li>1. 5% of compounds enter a Round Robin system, paying 15 levels upline before resetting</li>
+            
+                                                    <li>2. Disqualified levels are skipped</li>
+            
+                                                </ol>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-5 offset-md-1 wow fadeInUp" data-wow-duration="2s">
-                                <div class="blockcain-top-content">
-                                    <p>
-                                        An Aplha team is known as a “Unity” and team-building is encouraged
-
-                                        by rewarding leaders with both direct and indirect referral rewards up
-                                        
-                                        to 15 levels deep. Rewards are paid directly into the Vault and helps
-                                        
-                                        increase daily rewards.
-                                    </p>
-                                    <p>
-                                        Deposit Rewards          
-                                        
-                                        <ol type="1">
-                                        <li>1. 5% of all deposits from direct referrals (level 1) get paid to the direct
-
-                                            upline wallet</li>
-
-                                        <li>2. If the direct upline wallet doesn't qualify for referral rewards, the 5% deposit reward goes to the Alpha Vault (tax vault)</li>
-
-                                    </ol>
-                                    </p>
-                                    <p>
-                                        Compound Rewards          
-                                        
-                                        <ol type="1">
-                                        <li>1. 5% of compounds enter a Round Robin system, paying 15 levels upline before resetting</li>
-
-                                        <li>2. Disqualified levels are skipped</li>
-
-                                    </ol>
-                                    </p>
-                                </div>
-                            </div>
+                            </section>
                         </div>
                     </div>
-                </section>
+            
+                </div>
+                
             </div>
-        </div>
-
+        </section>
+        
         <div class="blog-and-footer-area">
 
             <footer class="xs-footer-sec">
