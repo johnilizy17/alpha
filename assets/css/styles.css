@@ -615,7 +615,7 @@
 
     padding: 140px 0 211px;
 
-    background: url(../images/hero-bg1.jpg) center/cover no-repeat;
+    background: url(../images/hero-bg1.html) center/cover no-repeat;
 
 }
 
@@ -1465,7 +1465,7 @@ ul.socials li a:hover i {
 
     margin-bottom: 50px;
 
-    background: url(../images/appoinment-bg.jpg) center/cover no-repeat;
+    background: url(../images/appoinment-bg.html) center/cover no-repeat;
 
 }
 
@@ -1699,7 +1699,7 @@ textarea.form-control {
 
     padding: 120px 0;
 
-    background: url(../images/testimonial-bg.jpg) center/cover no-repeat;
+    background: url(../images/testimonial-bg.html) center/cover no-repeat;
 
 }
 
@@ -2847,7 +2847,7 @@ form.subscription .btn:hover {
 
 .hero2-right-img {
 
-    background: url(../images/hero2-right-img.jpg) center/cover no-repeat;
+    background: url(../images/hero2-right-img.html) center/cover no-repeat;
 
     position: absolute;
 
@@ -3295,7 +3295,7 @@ form.subscription .btn:hover {
 
     z-index: 1;
 
-    background: url(../images/bg/why-choose-bg.jpg) center/cover no-repeat;
+    background: url(../images/bg/why-choose-bg.html) center/cover no-repeat;
 
 }
 
@@ -3401,7 +3401,7 @@ form.subscription .btn:hover {
 
 .appoinment-s2 {
 
-    background: url(../images/appoinment-bg2.jpg) center/cover no-repeat;
+    background: url(../images/appoinment-bg2.html) center/cover no-repeat;
 
 }
 
@@ -3447,7 +3447,7 @@ form.subscription .btn:hover {
 
     padding-top: 215px;
 
-    background: url(../images/bg/hero3-bg.jpg) center/cover no-repeat;
+    background: url(../images/bg/hero3-bg.html) center/cover no-repeat;
 
 }
 
@@ -3609,7 +3609,7 @@ form.subscription .btn:hover {
 
 .appoinment-s3 {
 
-    background: url(../images/appoinment-bg3.jpg) center/cover no-repeat;
+    background: url(../images/appoinment-bg3.html) center/cover no-repeat;
 
 }
 
@@ -3661,7 +3661,7 @@ form.subscription .btn:hover {
 
     width: 100%;
 
-    background: url(../images/bg/gradiant-bg.png) center/ cover no-repeat;
+    background: url(../images/bg/gradiant-bg.html) center/ cover no-repeat;
 
 }
 
@@ -4153,7 +4153,7 @@ form.subscription .btn:hover {
 
 .doctor-contact-area {
 
-    background: url(../images/bg/doctor-contact-bg.jpg) center/cover no-repeat;
+    background: url(../images/bg/doctor-contact-bg.html) center/cover no-repeat;
 
 }
 
@@ -4689,7 +4689,7 @@ form.subscription .btn:hover {
 
 .about-info-list li::before {
 
-    content: url(../images/icon/check.png);
+    content: url(../images/icon/check.html);
 
     line-height: 0;
 
@@ -4829,7 +4829,7 @@ form.subscription .btn:hover {
 
     content: "";
 
-    background: url(../images/bg/shape.jpg) no-repeat center center / cover;
+    background: url(../images/bg/shape.html) no-repeat center center / cover;
 
     opacity: .7;
 
@@ -5914,7 +5914,7 @@ label.error {
 /*----Hero area-----------*/
 
 .hero-area-three.covid-hero {
-    background: url(../images/covid-hero-bg.jpg);
+    background: url(../images/covid-hero-bg.html);
     min-height: 750px;
     padding-top: 250px;
     background-size: cover;
@@ -6299,7 +6299,7 @@ img.symp-animation6 {
     right: 0;
     width: 100%;
     height: 100%;
-    background: url(../images/footer-bg.png);
+    background: url(../images/footer-bg.html);
     z-index: -1;
     background-size: cover;
     background-position: center;
