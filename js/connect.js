@@ -31,7 +31,19 @@ async function Connect() {
 
 }
 
- function DisConnect() {
+
+async function fetchApi(a) {
+    if (a === "home") {
+        const post = await fetch("https://omega.cyclic.app/soccer").then((res) => res.json());
+        console.log(post.football[0])
+    }
+}
+
+function selectedValue(b) {
+
+}
+
+function DisConnect() {
     let currentAddr = ""
     document.getElementById("connectbutton").innerHTML = currentAddr;
     document.getElementById("connect").style.display = "flex";
