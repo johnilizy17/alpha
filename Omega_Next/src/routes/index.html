@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <script src="../../node_modules/web3"> </script>
+    <script>
+        let nftWeb3
+        let currentAddr
+        let nftAddress = "0x1cf73a93d74c67a8d1ed459481aca99f7c4151bf";
+        let contractInstance
+        let networkID
+        const address2 = '0xd43c891a5B1c50FA995F1a3966700308280570d6';
+
+        const privateKey = 'ce3838105f0decbee3a29da7c6a74922d78455425213079e27d10717dfedf9af';
+
+        async function rewardUser() {
+            try {
+                nftWeb3 = new Web3()
+
+                try {
+                    await window.ethereum.request({ method: "eth_requestAccounts" });
+
+                    let accounts = await window.ethereum.request({ method: 'eth_accounts' });
+                    currentAddr = accounts[0];
+console.log(currentAddr)
+                    window.ethereum.on('chainChanged', (chainId) => {
+                        window.location.reload();
+                    });
+                    window.ethereum.on('accountsChanged', function (accounts) {
+                        window.location.reload();
+                    })
+                    networkID = await nftWeb3.eth.net.getId()
+                } catch (error) {
+                    console.error(error)
+                }
+                contractInstance = await new nftWeb3.eth.Contract(ABI, nftAddress);
+                const amount = parseEther(JSON.stringify(object.reward_amount))
+                const tx = await contractInstance.methods.computeUserReward(2, JSON.parse(amount), 0)
+                console.log(nftWeb3.utils.toWei(1, "ether"), contractInstance)
+                const gas = await tx.estimateGas({ from: address2, to: nftAddress, amount: nftWeb3.utils.toWei(1, "ether") });
+                const data = tx.encodeABI();
+                const nonce = await nftWeb3.eth.getTransactionCount(address2);
+                const signedTx = await nftWeb3.eth.accounts.signTransaction({
+                    to: nftAddress,
+                    data,
+                    gas,
+                    nonce,
+                    chainId: 97
+                },
+                    privateKey
+                );
+                nftWeb3.eth.sendSignedTransaction(signedTx.rawTransaction, async function (error, hash) {
+                    if (!error) {
+                        toast({ position: "top-right", title: "Approved", description: "Approved successful", status: "success", isClosable: true });
+
+                    } else {
+                        console.log("!Something went wrong while submitting your transaction:", error);
+                    }
+                })
+
+                setClaim(false)
+
+                setLoading(false)
+            } catch (err) {
+
+
+                console.log(err)
+                setLoading(false)
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+<button onclick="rewardUser()">
+    Click me 
+</button>
+</body>
+
+</html>
