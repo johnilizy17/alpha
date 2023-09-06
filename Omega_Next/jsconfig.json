@@ -1,9 +1,0 @@
-{
-  
-  "trailingSlash": true,
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
-}
